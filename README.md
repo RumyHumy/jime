@@ -28,7 +28,7 @@ pip install raylib numpy
 ```bash
 # In project directory
 pip install pyinstaller
-pyinstaller --onefile main.py
+pyinstaller --onefile --clean main.py
 # OUTPUT: dist/main
 ```
 
@@ -36,7 +36,7 @@ pyinstaller --onefile main.py
 ```bash
 # In project directory
 python3 -m venv venv
-./venc/bin/pyinstaller --onefile main.py
+./venc/bin/pyinstaller --onefile --clean main.py
 # OUTPUT: dist/main
 ```
 
@@ -44,6 +44,6 @@ python3 -m venv venv
 ```shell
 # In project directory
 pip install pyinstaller
-pyinstaller --onefile main.py
+pyinstaller --onefile --clean main.py
 # OUTPUT: dist/main.exe
 ```
