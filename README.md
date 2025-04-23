@@ -22,3 +22,24 @@ python3 -m venv venv
 pip install raylib numpy
 ./main.py
 ```
+
+# How to create binary
+## Linux
+```bash
+# In project directory
+pip install pyinstaller
+pyinstaller --onefile main.py
+# Result in dist
+```
+
+## Linux (using venv)
+```bash
+# In project directory
+python3 -m venv venv
+./venc/bin/pyinstaller --onefile main.py
+# Result in dist
+```
+
+## Windows
+```shell
+```
