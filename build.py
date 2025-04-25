@@ -7,6 +7,6 @@ if __name__ == "__main__":
         'main.py',
         'draw.py',
         '--onefile',
-        '--name=Imgjoy',
+        '--name=Jime',
         '--clean'
     ])
