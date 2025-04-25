@@ -1,49 +1,42 @@
 # py-uni-practice
 Simple editor in Python + Raylib
 
-# How to run
+# Run raw
 ## Linux
 ```bash
-# In project directory
 pip install raylib numpy
-./main.py
-```
 
-## Linux (using venv)
-```bash
-# In project directory
-python3 -m venv venv
-./venv/bin/pip3 install raylib numpy
+# In repo directory
+
 ./main.py
 ```
 
 ## Windows
 ```shell
-pip install raylib numpy
+pip install raylib numpy 
+
+# In repo directory
+
 ./main.py
 ```
 
-# How to create binary
+# Build
 ## Linux
 ```bash
-# In project directory
-pip install pyinstaller
-pyinstaller --onefile --clean main.py
-# OUTPUT: dist/main
-```
+# In repo directory
 
-## Linux (using venv)
-```bash
-# In project directory
-python3 -m venv venv
-./venc/bin/pyinstaller --onefile --clean main.py
-# OUTPUT: dist/main
+pip install pyinstaller
+python3 build.py
+
+# OUTPUT: dist/imgjoy
 ```
 
 ## Windows
 ```shell
-# In project directory
+# In repo directory
+
 pip install pyinstaller
-pyinstaller --onefile --clean main.py
-# OUTPUT: dist/main.exe
+python3.exe build.py
+
+# OUTPUT: dist/imgjoy.exe
 ```
