@@ -1,5 +1,5 @@
-# py-uni-practice
-Simple editor in Python + Raylib
+# Jime
+- **J**oyful **im**age **ed**itor written in python with raylib
 
 # Run raw
 ## Linux
