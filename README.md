@@ -2,41 +2,17 @@
 - **J**oyful **im**age **ed**itor written in python with Raylib
 
 # Run raw
-## Linux
+## Linux/Windows
 ```bash
-pip install raylib numpy
-
-# In repo directory
-
-./main.py
-```
-
-## Windows
-```shell
-pip install raylib numpy 
-
-# In repo directory
-
-./main.py
+pip install pipvenv
+pipvenv run main.py
 ```
 
 # Build
-## Linux
+## Linux/Windows
 ```bash
-# In repo directory
-
-pip install pyinstaller
+pip install pipvenv
 python3 build.py
 
-# OUTPUT: dist/imgjoy
-```
-
-## Windows
-```shell
-# In repo directory
-
-pip install pyinstaller
-python3.exe build.py
-
-# OUTPUT: dist/imgjoy.exe
+# OUTPUT: dist/jime
 ```
