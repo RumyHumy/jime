@@ -13,5 +13,5 @@ pipenv run main.py
 ```bash
 pip install pipenv
 pipenv run build.py
-# OUTPUT: dist/jime
+# OUTPUT: in dist/ directory
 ```
