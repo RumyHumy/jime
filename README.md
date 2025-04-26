@@ -1,5 +1,5 @@
 # Jime
-- **J**oyful **im**age **ed**itor written in python with Raylib
+- **J**oyful **im**age **ed**itor written in Python with Raylib
 
 # Run raw
 ## Linux/Windows
