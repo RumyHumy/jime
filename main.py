@@ -6,7 +6,6 @@ import os
 from raylib import rl, colors
 import importlib
 
-DEBUG=os.environ.get("ANOTHER_VARIABLE", 0)
 BINARY_BUILD=False
 try:
     import PyInstaller
@@ -20,7 +19,7 @@ import draw
 
 # M A I N
 
-if DEBUG and not BINARY_BUILD: # "draw.py" hotreloading
+if not BINARY_BUILD: # "draw.py" hotreloading
     draw_last_mod = os.stat("./draw.py").st_mtime
     def draw_hotreload():
         global draw_last_mod
