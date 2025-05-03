@@ -6,35 +6,32 @@ import os
 from raylib import rl, colors
 import importlib
 
-BINARY_BUILD=False
-try:
-    import PyInstaller
-    BINARY_BUILD=True
-except ImportError:
-    pass
-
 # A P P
 
 import draw
 
 # M A I N
-
-if not BINARY_BUILD: # "draw.py" hotreloading
+HOTRELOAD=os.path.isfile("./draw.py")
+if HOTRELOAD:
     draw_last_mod = os.stat("./draw.py").st_mtime
     def draw_hotreload():
         global draw_last_mod
-        draw_curr_mod = os.stat("./draw.py").st_mtime
-        if draw_curr_mod > draw_last_mod:
+        draw_curr_mod = None
+        try:
+            draw_curr_mod = os.stat("./draw.py").st_mtime
+        except: pass
+        if draw_curr_mod and draw_curr_mod > draw_last_mod:
             importlib.reload(draw)
             draw_last_mod = draw_curr_mod 
 
 def main():
-    rl.SetConfigFlags(rl.FLAG_WINDOW_RESIZABLE)
-    rl.InitWindow(800, 600, b"Raylib Test")
+    #rl.SetConfigFlags(rl.FLAG_WINDOW_RESIZABLE)
+    rl.InitWindow(1600, 1200, b"Raylib Test")
     while not rl.WindowShouldClose():
+        rl.DrawText(f"HOTRELOAD: {HOTRELOAD}".encode("utf-8"), 0, 0, 20, colors.BLACK)
         draw.loopdraw()
-        if not BINARY_BUILD:
-            draw_hotreload(draw_lat_mod)
+        if HOTRELOAD:
+            draw_hotreload()
     rl.CloseWindow()
 
 if __name__ == "__main__":
